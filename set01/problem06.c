@@ -25,4 +25,3 @@ void greatest(int *a, int *b, int *c, int *largest)
         *largest = *c;
     }
 }
-
