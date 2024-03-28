@@ -1,6 +1,5 @@
-// 1. Write a C program to print your name.
 #include <stdio.h>
 int main() {
- printf("Ankit Kumar");
+ printf("Ankit Kumar\n");
  return 0;
 }

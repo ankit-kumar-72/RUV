@@ -1,26 +1,36 @@
 #include<stdio.h>
-void Greatest(int a, int b, int c)
+int input()
 {
-    if(a>=b && a>=c){
-        printf("The largest of %d,%d and %d is %d",a,b,c,a);
+    int n;
+    printf("Enter a Number: ");
+    scanf("%d",&n);
+    return n;
+};
+int compare(int a, int b, int c)
+{
+    if(a>b && a>c){
+        return a;
     }
-    else if(b>=c){
-        printf("The largest of %d,%d and %d is %d",a,b,c,b);
+    else if(b>c){
+        return b;
     }
     else{
-        printf("The largest of %d,%d and %d is %d",a,b,c,c);
+        return c;
     }
-}
+};
+
+void output(int a, int b, int c, int largest)
+{
+    printf("The largest of %d, %d and %d is %d",a,b,c,largest);
+};
+
 int main()
 {
-    int a, b,c;
-    printf("Enter your 1st Value: ");
-    scanf("%d",&a);
-    printf("Enter your 2nd Value: ");
-    scanf("%d",&b);
-    printf("Enter your 3rd Value: ");
-    scanf("%d",&c);
-    Greatest(a,b,c);
+    int a,b,c;
+    a = input();
+    b = input();
+    c = input();
+    int largest = compare(a,b,c);
+    output(a,b,c,largest);
     return 0;
 }
-
